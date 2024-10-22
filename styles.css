@@ -1,0 +1,1003 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+  }
+  header {
+    color: burlywood;
+    padding: 20px;
+    text-align: center;
+  }
+  .headerOptions {
+    display: flex;
+    width: 80%;
+    justify-content: space-evenly;
+    margin-top: 0rem;
+  }
+  .homeIcon {
+    display: grid;
+    width: 6%;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    margin-right: 0rem;
+  }
+  .homeIcon a {
+    color: #ed9c33;
+    text-decoration: none;
+  }
+  
+  /* CSS for logo and text */
+  .logoImageNdText {
+    display: grid;
+    float: left;
+    width: 10%;
+  }
+  .logoSpan {
+    margin-left: -2rem;
+  }
+  
+  /* CSS for Search bar */
+  /* #search-container {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 83%;
+  }
+  #searchbar {
+    width: 60%;
+    height: 40px;
+    border-radius: 22px;
+    outline: none;
+    border: 1px solid #dbdbdb;
+    background-color: #e2e2e2;
+    padding-left: 1rem;
+  }
+  #search-container > input[type="text"] {
+    background-color: #f1dec5;
+    background-image: url(assets/images/search.svg);
+    background-position: 48rem;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    letter-spacing: 1px;
+    padding: 10px 0px 10px 50px px;
+  } */
+  /* CSS for Profile, cart and whishlist */
+  .profile-container {
+    display: flex;
+    width: 12%;
+    justify-content: space-evenly;
+  }
+  .profile-container a {
+    color: #ed9c33;
+    text-decoration: none;
+  }
+  .profile-container a:hover {
+    text-decoration: underline;
+  }
+  .profileMain {
+    padding-left: 0rem;
+  }
+  .profileSpan {
+    display: grid;
+  }
+  
+  /* CSS for Artisian's Image, Art and About part */
+  .container {
+    max-width: 1200px;
+    margin: 20px 5px;
+    padding: 0 20px;
+  }
+  .artist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .artist img {
+    max-width: 50%;
+    height: auto;
+  }
+  .artist-info {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .artist-info h2 {
+    margin-top: 0;
+  }
+  .artwork {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .artwork-card {
+    flex: 0 0 calc(33.33% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  .artwork-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  /* CSS for sliding Images and staticBannnerRight */
+  .bannerScroll {
+    display: flex;
+    width: 100%;
+    /* border-top: 1px solid #ed9c33; */
+    /* border-bottom: 1px solid #ed9c33; */
+    background-image: url(assets/images/bgImage.jpeg);
+    border-left: 2px solid darkgoldenrod;
+    margin-left: 1rem;
+    overflow: hidden;
+  }
+  .slidingImages > img {
+    height: 100px;
+    width: 100px;
+  }
+  
+  .zoom-in {
+    transition: transform 0.3s ease;
+  }
+  
+  /* CSS for main  and sliding window */
+  main {
+    overflow: hidden; /* Hide overflow to prevent horizontal scrollbars */
+  }
+  
+  .slider {
+    display: none;
+    /* display: flex; */
+    /* width: 500%; Set width to 500% to accommodate all images */
+    white-space: nowrap; /* Prevent images from wrapping */
+    animation: slide 20s linear infinite; /* Infinite sliding animation */
+    height: 15rem; /* Set height for the slider container */
+    overflow: hidden; /* Hide overflow to prevent images from overflowing */
+    position: relative;
+    width: 100%;
+    align-items: center;
+  }
+  .slidingImages {
+    margin: 2rem;
+  }
+  .slider img {
+    /* width: 15%; Each image takes up 15% of the slider's width */
+    display: inline-block;
+    object-fit: cover; /* Ensure images cover the entire slide */
+    transition: transform 0.5s ease;
+  }
+  .slider img:hover {
+    transform: scale(1.2);
+    animation-play-state: paused;
+  }
+  
+  @keyframes slide {
+    0% {
+      transform: translateX(0%); /* Start position from right end */
+    }
+    100% {
+      transform: translateX(-100%); /* End position to left */
+    }
+  }
+  
+  /* CSS for Footer part (social media, policy and About) */
+  footer {
+    border-top: 1px solid #bf9767;
+    color: #bf9767;
+    padding: 20px;
+  }
+  .footer-links {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: center; */
+  }
+  .footer-links ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .footer-links ul li {
+    /* display: inline; */
+    margin-right: 10px;
+  }
+  
+  .footer-links ul li a {
+    color: #bf9767;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  .footer-links ul li a:hover {
+    color: #8b6c4a; /* Changing color on hover */
+  }
+  .social-media a {
+    color: #bf9767;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  .social-media a:hover img {
+    transform: scale(1.2); /* Zooming effect */
+    height: 120px;
+    width: 150px;
+  }
+  /* Grid Layout Styles */
+  
+  .grid-container {
+    display: grid;
+    /* grid-template-columns: repeat(3, 1fr); Three equal-width columns */
+    /* gap: 20px; Spacing between grid items */
+  }
+  
+  .grid-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    text-align: center;
+  }
+  #header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  /* media query for a responsive website */
+  @media (max-width: 768px) {
+    #header-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .headerOptions {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap */
+      justify-content: center; /* Align items horizontally */
+    }
+  
+    .logoImageNdText,
+    #search-container,
+    .profile-container {
+      flex: 1; /* Take up equal space */
+      margin: 0.5rem; /* Add spacing between items */
+    }
+  
+    nav {
+      margin-top: 1rem; /* Adjust margin */
+    }
+  
+    nav ul {
+      display: flex;
+      flex-wrap: wrap; /* Allow items to wrap */
+      justify-content: center; /* Center items horizontally */
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+  
+    nav a {
+      margin: 0.5rem; /* Add spacing between items */
+    }
+  }
+  
+  /* for dropdown contents */
+  /* dropdown CSS */
+  /* Style the dropdown content */
+  ul.no-bullets {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  /* new dropdown css */
+  .dropdown-container {
+    display: flex;
+    align-items: center;
+    margin-right: 10px; /* Adjust spacing between items */
+    position: relative; /* Necessary for absolute positioning */
+    margin-bottom: 1rem;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position dropdown below the container */
+    left: 0; /* Align dropdown with the container */
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-container:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .dropdown-btn {
+    background-color: antiquewhite;
+    width: 160px;
+  }
+  
+  .goldengrassClass {
+    max-width: 960px;
+    float: right;
+    top: 1rem;
+    position: relative;
+  }
+  
+  .rate {
+    text-align: center;
+    color: greenyellow;
+  }
+  
+  .fa-search {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 20px;
+    src: url(../Learnings/sikkiArtWebsite/assets/images/);
+  }
+  
+  .iconLinks {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* help section */
+  .help-section {
+    /* text-align: center; Center-align content */
+  }
+  
+  .help-section h5 {
+    font-size: 1.2em;
+    color: #b08d64;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .help-section ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0;
+  }
+  
+  .help-section li {
+    margin-bottom: 10px;
+  }
+  
+  .help-section a {
+    text-decoration: none; /* Remove underline */
+    color: #b08d64; /* Set the color to match the design */
+    font-size: 16px;
+  }
+  
+  .help-section a:hover {
+    color: #8b6c4a; /* Darker shade on hover */
+  }
+  
+  /* social section */
+  .social-media {
+    text-align: center;
+    /* width: 100%; */
+  }
+  
+  .follow-us-title {
+    font-size: 1.2em;
+    color: #b08d64;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    display: inline-block;
+    width: 180px; /* Adjust width to match icons */
+  }
+  
+  .icon-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+  }
+  
+  /* Default Mail Icon */
+  .icon-links a {
+    font-size: 40px;
+    color: #b08d64;
+    transition: color 0.3s;
+  }
+  
+  /* Resize Instagram and Facebook Icons */
+  .resized-icon i {
+    width: 34.29px;
+    height: 40px;
+    font-size: 34.29px; /* Control the size for uniform look */
+  }
+  
+  .icon-links a:hover {
+    color: #8b6c4a;
+  }
+  
+  /* privacy section */
+  .policy-section {
+    /* text-align: center; */
+  }
+  
+  .policy-section h5 {
+    font-size: 1.2em;
+    color: #b08d64;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+  }
+  
+  .policy-section ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+  }
+  
+  .policy-section li {
+    margin-bottom: 10px;
+  }
+  
+  .policy-section a {
+    text-decoration: none; /* Remove underline */
+    color: #b08d64; /* Match color */
+    font-size: 16px;
+  }
+  
+  .policy-section a:hover {
+    color: #8b6c4a; /* Darker shade on hover */
+  }
+  
+  /* header section */
+  
+  header {
+    background-color: #fff;
+    border-bottom: 1px solid #b08d64;
+  }
+  
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    display: grid;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 128px;
+    width: 104px;
+    margin-right: 10px;
+  }
+  
+  .logo p {
+    font-family: "Sans-serif";
+    font-size: 20px;
+    color: #b08d64;
+  }
+  
+  /* .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-bar input {
+    border: none;
+    border-bottom: 1px solid #b08d64;
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #8b6c4a;
+    width: 18rem;
+  }
+  
+  .search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #b08d64;
+    font-size: 20px;
+  }
+  
+  
+  .nav-links ul {
+    display: flex;
+    list-style-type: none;
+    gap: 50px;
+    margin-top: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #b08d64;
+    font-size: 18px;
+  } */
+  
+  .middle-section {
+    display: flex; /* Aligns search bar and nav links vertically */
+    flex-direction: column; /* Stacks the search bar on top of nav links */
+    align-items: center; /* Centers the contents */
+  }
+  
+  .search-bar {
+    display: flex; /* Flexbox for input and button alignment */
+    justify-content: center; /* Centers the items horizontally */
+    align-items: center; /* Centers the items vertically */
+    margin-bottom: 1rem; /* Space between search bar and nav links */
+    outline: none;
+  }
+  
+  .search-bar input {
+    border: none;
+    border-bottom: 1px solid #b08d64; /* Custom bottom border */
+    padding: 5px 10px;
+    font-size: 16px;
+    color: #8b6c4a;
+    width: 18rem;
+    margin-right: 0.5rem;
+    outline: none; /* Removes default blue outline */
+    font-family: monospace;
+  }
+  .search-bar input::placeholder {
+    color: #e0b98f; /* Brown color for placeholder */
+    opacity: 1; /* Ensures full opacity for the placeholder text */
+  }
+  
+  .search-bar button {
+    background: none; /* No background for button */
+    border: none; /* No border for button */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: #b08d64; /* Color of the search icon */
+    font-size: 20px; /* Font size of the icon */
+    display: flex; /* Use flexbox to center icon */
+    align-items: center; /* Center the icon vertically */
+    position: relative;
+  }
+  
+  .nav-links ul {
+    display: flex; /* Display nav links in a row */
+    list-style-type: none; /* Remove bullet points */
+    gap: 50px; /* Space between nav items */
+    margin-top: 2rem; /* Space above nav links */
+    padding: 0; /* Remove default padding */
+  }
+  
+  .nav-links a {
+    text-decoration: none; /* No underline for links */
+    color: #b08d64; /* Link color */
+    font-size: 18px; /* Font size for links */
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+  }
+  
+  .profile-icons {
+    display: grid;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .icons i {
+    font-size: 24px;
+    color: #b08d64;
+  }
+  
+  .my-profile {
+    padding: 5px 10px;
+    background-color: #e7e7e7;
+    /* border: 1px solid #b08d64; */
+    color: #b08d64;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .artisiansP {
+    margin-top: 2rem;
+  }
+  
+  /* .middle-section{
+    display: grid;
+    color: #BF9767;
+  } */
+  
+  /* ***********clock css******* */
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .clock-dial {
+    width: 200px;
+    height: 200px;
+    border: 2px solid greenyellow;
+    border-radius: 50%;
+    margin: 0 auto;
+    position: relative;
+  }
+  .digital {
+    height: 50px;
+    width: 100px;
+    background-color: rgb(223, 163, 223);
+    position: absolute;
+    top: 350px;
+    left: 220px;
+  }
+  .point {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 90px;
+    left: 90px;
+  }
+  .hour {
+    font-size: 30px;
+    font-weight: bold;
+    color: blue;
+    position: absolute;
+  }
+  
+  .hour-1 {
+    top: 40px;
+    right: 130px;
+  }
+  .hour-2 {
+    top: 125px;
+    right: 45px;
+  }
+  .hour-3 {
+    top: 235px;
+    right: 10px;
+  }
+  .hour-4 {
+    top: 345px;
+    right: 45px;
+  }
+  .hour-5 {
+    top: 430px;
+    right: 130px;
+  }
+  .hour-1 {
+    top: 40px;
+    right: 130px;
+  }
+  .hour-6 {
+    bottom: 10px;
+    left: 240px;
+  }
+  .hour-7 {
+    top: 430px;
+    left: 130px;
+  }
+  .hour-8 {
+    top: 345px;
+    left: 45px;
+  }
+  .hour-9 {
+    top: 235px;
+    left: 10px;
+  }
+  .hour-10 {
+    top: 125px;
+    left: 45px;
+  }
+  .hour-11 {
+    top: 40px;
+    left: 130px;
+  }
+  .hour-12 {
+    top: 10px;
+    left: 235px;
+  }
+  .brand {
+    font-weight: bold;
+    font-size: 20px;
+    top: 90px;
+    left: 42.5%;
+    position: absolute;
+  }
+  .minutes-hand-wrapper {
+    width: 150px;
+    height: 150px;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    border-radius: 50%;
+  }
+  .minute-hand {
+    position: relative;
+  }
+  .minute-hand .hand {
+    width: 4px;
+    height: 100px;
+    background-color: black;
+    position: absolute;
+    left: 18px;
+    /* (wrapper width - hand width)/ 2 */
+  }
+  .minute-hand .arrow {
+    font-size: 30px;
+    font-weight: bold;
+    left: 190px;
+    top: -7px;
+    position: absolute;
+    transform: rotate(180deg);
+  }
+  .hour-hand-wrapper {
+    width: 300px;
+    height: 300px;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    border-radius: 50%;
+  }
+  .hour-hand {
+    position: relative;
+  }
+  .hour-hand .hand {
+    width: 4px;
+    height: 150px;
+    background-color: black;
+    position: absolute;
+    left: 148px; /* (wrapper width - hand width)/ 2 */
+  }
+  .hour-hand .arrow {
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    left: 140px;
+    top: -7px;
+    position: absolute;
+    transform: rotate(180deg);
+  }
+  .second-hand-wrapper {
+    width: 350px;
+    height: 350px;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 75px;
+    left: 75px;
+    border-radius: 50%;
+  }
+  .second-hand {
+    position: relative;
+  }
+  .second-hand .hand {
+    width: 2px;
+    height: 175px;
+    background-color: black;
+    position: absolute;
+    left: 174px; /* (wrapper width - hand width)/ 2 */
+  }
+  
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* carousel */
+  .video-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .carousel-video-container {
+    position: relative;
+  }
+  
+  video {
+    width: 100%;
+    height: auto;
+  }
+  
+  .custom-play-btn {
+    height: 124px;
+    width: 124px;
+    position: absolute;
+    /* top: 50%; */
+    top: -21rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid #f0c083;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+  }
+  
+  .custom-play-btn .triangle {
+    width: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    border-left: 56px solid #f0c083; /* Triangle width: 56px */
+    border-top: 28px solid transparent; /* Half of 56px for triangle's top border */
+    border-bottom: 28px solid transparent;
+    position: relative;
+    left: 1.5rem;
+  }
+  
+  .carousel-indicators {
+    /* display: flex;
+    justify-content: center;
+    margin-top: 10px; */
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+  }
+  
+  .indicator {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 11px solid #f0c083; /* Triangle color */
+    margin: 4rem 1rem;
+    cursor: pointer;
+  }
+    /* width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border: 2px solid #f0c083;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer; */
+  
+  
+  
+  .indicator.active {
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 11px solid #aaa; /* Triangle color */
+    margin: 4rem 1rem;
+    cursor: pointer;
+  }
+  
+  .full-screen-image {
+    width: 100%;
+  
+    /* height: 100vh; */
+     /* Full height of the viewport */
+    overflow: hidden; /* To hide overflow */
+  }
+  
+  .full-screen-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area */
+  }
+  
+  .image-grid {
+    display: flex;
+    justify-content: space-around; /* Space between items */
+    margin-top: 20px; /* Space above grid */
+    width: 100%;
+  }
+  
+  .grid-item {
+    flex: 1; /* Equal width for each item */
+    margin: 0 10px; /* Margin between items */
+  }
+  
+  .grid-item img {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Optional: for rounded corners */
+  }
+  
+  /* Optional: Responsive styles */
+  @media (max-width: 768px) {
+    .image-grid {
+        flex-direction: column; /* Stack items on smaller screens */
+    }
+    .grid-item {
+        margin: 10px 0; /* Margin between stacked items */
+    }
+  }
+  
+  .custom-play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%; /* Circular shape */
+    width: 124px; /* Width of the button */
+    height: 124px; /* Height of the button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgba(255, 255, 255, 0.7); Semi-transparent white background */
+    border: 2px solid #f0c083;
+  }
+  
+  .triangle {
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent; /* Adjust for triangle size */
+    border-right: 15px solid transparent; /* Adjust for triangle size */
+    border-bottom: 25px solid black; /* Color of the triangle */
+  }
+  
+  .image-grid {
+    display: flex; /* Use flexbox to arrange items in a row */
+    justify-content: space-between; /* Space out the items evenly */
+    margin-top: 20px;
+    /* display: none; Initially hidden */
+  }
+  
+  .grid-item {
+    flex: 1; /* Each item will take equal space */
+    margin: 0 10px; /* Add margin for spacing */
+    max-width: 32%; /* Ensure each item has a maximum width */
+  }
+  
+  .grid-item img {
+    width: 100%; /* Make images responsive */
+    height: auto; /* Maintain aspect ratio */
+  }
+  
+  .artisan-profile {
+    display: flex;
+    margin-top: 20px;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: #e7e7e7;
+    /* border: 1px solid #b08d64; */
+    color: #b08d64;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  .headingStyle{
+    display: flex;
+    justify-content: center; 
+    padding: 5px 10px;
+    background-color: #e7e7e7;
+    /* border: 1px solid #b08d64; */
+    color: #b08d64;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    top: 1rem;
+  }
+  

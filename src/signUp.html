@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: antiquewhite;
+        background-image: url(../assets/images/gg3.jpeg);
+        /* background-repeat: no-repeat; */
+        background-size: cover; /* Cover the entire background */
+        background-position: center; /* Center the background image */
+        height: 100vh; /* Set the height to 100% of the viewport height */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        max-width: 400px;
+        margin: 100px auto;
+        padding: 20px;
+        /* background-color: antiquewhite; */
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-top: 22rem;
+      }
+      h2 {
+        text-align: center;
+      }
+      .button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        background-color: #4285f4;
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+      .button:hover {
+        background-color: #2b77d9;
+      }
+      .link {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .or {
+        margin-left: 12rem;
+      }
+      .close-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999; /* Ensure it appears on top of other elements */
+}
+
+.close-icon img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="close-icon">
+            <a href="../index.html"><img src="../assets/images/close_icon.png" alt="Close"></a>
+        </div>
+      <h2>Sign Up</h2>
+      <a href="https://myaccount.google.com/" class="button"
+        >Sign Up with Google</a
+      >
+      <a
+        href="https://facebook.com/"
+        class="button"
+        style="background-color: #3b5998"
+        >Sign Up with Facebook</a
+      >
+      <span class="or">or</span>
+      <a
+        href="../src/guestSignUp.html"
+        class="button"
+        style="background-color: #6242ca"
+        >Visit as Guest</a
+      >
+
+      <p class="link">Already a member? <a href="../index.html">Log In</a></p>
+    </div>
+  </body>
+</html>
