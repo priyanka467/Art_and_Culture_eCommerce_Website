@@ -648,13 +648,13 @@ body {
     
   .profile-icons {
     display: grid;
+    position: relative;
+    bottom: 1.5rem;
   }
   .icons {
     display: flex;
     align-items: center;
     gap: 20px;
-    position: relative;
-    bottom: 2rem;
   }
   
   .icons i {
