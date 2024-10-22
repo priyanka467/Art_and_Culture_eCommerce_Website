@@ -86,7 +86,6 @@ body {
   
   /* CSS for Artisian's Image, Art and About part */
   .container {
-    max-width: 100%;
     margin: 20px 5px;
     padding: 0 20px;
   }
