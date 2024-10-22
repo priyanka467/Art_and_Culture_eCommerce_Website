@@ -537,13 +537,87 @@ body {
     font-size: 18px;
   } */
   
-  .middle-section {
+/* Middle Section */
+
+.middle-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.search-bar input {
+    padding: 10px;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.search-bar button {
+    padding: 10px;
+    border: none;
+    background-color: #ff6347;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.fa-search {
+    font-size: 16px;
+}
+
+/* Header Options - Dropdown Styles */
+.headerOptions {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+}
+
+.dropdown-container {
+    position: relative;
+    padding: 15px;
+    font-size: 16px;
+    color: #b77a41;
+    cursor: pointer;
+}
+
+.dropdown-container:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10px 0;
+}
+
+.dropdown-content a {
+    color: #000;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+
+  .middle-section1 {
     display: flex; /* Aligns search bar and nav links vertically */
     flex-direction: column; /* Stacks the search bar on top of nav links */
     align-items: center; /* Centers the contents */
   }
   
-  .search-bar {
+  .search-bar1 {
     display: flex; /* Flexbox for input and button alignment */
     justify-content: center; /* Centers the items horizontally */
     align-items: center; /* Centers the items vertically */
@@ -551,7 +625,7 @@ body {
     outline: none;
   }
   
-  .search-bar input {
+  .search-bar1 input {
     border: none;
     border-bottom: 1px solid #b08d64; /* Custom bottom border */
     padding: 5px 10px;
@@ -562,12 +636,12 @@ body {
     outline: none; /* Removes default blue outline */
     font-family: monospace;
   }
-  .search-bar input::placeholder {
+  .search-bar1 input::placeholder {
     color: #e0b98f; /* Brown color for placeholder */
     opacity: 1; /* Ensures full opacity for the placeholder text */
   }
   
-  .search-bar button {
+  .search-bar1 button {
     background: none; /* No background for button */
     border: none; /* No border for button */
     cursor: pointer; /* Pointer cursor on hover */
