@@ -548,14 +548,14 @@ body {
     border-bottom: 1px solid #ddd;
 }
 
-.search-bar input {
+.search-bar1 input {
     padding: 10px;
     width: 200px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-.search-bar button {
+.search-bar1 button {
     padding: 10px;
     border: none;
     background-color: #ff6347;
@@ -617,7 +617,7 @@ body {
     align-items: center; /* Centers the contents */
   }
   
-  .search-bar1 {
+  .search-bar {
     display: flex; /* Flexbox for input and button alignment */
     justify-content: center; /* Centers the items horizontally */
     align-items: center; /* Centers the items vertically */
@@ -625,7 +625,7 @@ body {
     outline: none;
   }
   
-  .search-bar1 input {
+  .search-bar input {
     border: none;
     border-bottom: 1px solid #b08d64; /* Custom bottom border */
     padding: 5px 10px;
@@ -636,12 +636,12 @@ body {
     outline: none; /* Removes default blue outline */
     font-family: monospace;
   }
-  .search-bar1 input::placeholder {
+  .search-bar input::placeholder {
     color: #e0b98f; /* Brown color for placeholder */
     opacity: 1; /* Ensures full opacity for the placeholder text */
   }
   
-  .search-bar1 button {
+  .search-bar button {
     background: none; /* No background for button */
     border: none; /* No border for button */
     cursor: pointer; /* Pointer cursor on hover */
