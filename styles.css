@@ -652,7 +652,9 @@ body {
   .icons {
     display: flex;
     align-items: center;
-    gap: 15px;
+    gap: 20px;
+    position: relative;
+    bottom: 2rem;
   }
   
   .icons i {
