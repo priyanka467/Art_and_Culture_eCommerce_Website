@@ -6,7 +6,7 @@ body {
   }
   header {
     color: burlywood;
-    padding: 20px;
+    padding: 20px 20px 2px 20px;
     text-align: center;
   }
   .headerOptions {
@@ -470,14 +470,14 @@ body {
   
   header {
     background-color: #fff;
-    border-bottom: 1px solid #b08d64;
+    /* border-bottom: 1px solid #b08d64; */
   }
   
   .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    /* padding: 2px 20px; */
     /* max-width: 1200px; */
     margin: 0 auto;
     width: 100%;
@@ -615,9 +615,10 @@ body {
 .dropdown-container {
     position: relative;
     padding: 15px;
-    font-size: 16px;
+    font-size: 22px;
     color: #b77a41;
     cursor: pointer;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .dropdown-container:hover .dropdown-content {
@@ -959,20 +960,11 @@ body {
   .image-grid {
     display: flex;
     justify-content: space-around; /* Space between items */
-    margin-top: 20px; /* Space above grid */
+    /* margin-top: 40px; Space above grid */
+    padding: 30px;
     width: 100%;
   }
-  
-  .grid-item {
-    flex: 1; /* Equal width for each item */
-    margin: 0 10px; /* Margin between items */
-  }
-  
-  .grid-item img {
-    width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Optional: for rounded corners */
-  }
+
   
   /* Optional: Responsive styles */
   @media (max-width: 768px) {
@@ -983,6 +975,45 @@ body {
         margin: 10px 0; /* Margin between stacked items */
     }
   }
+
+  /* new code for image grid */
+  .container {
+    display: flex;
+    justify-content: space-between; /* Ensure even spacing between items */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width of the container */
+    padding: 20px; /* Add some padding */
+}
+
+.grid-item {
+    flex: 1; /* All items will take up equal width */
+    /* margin: 10px; Optional: margin between grid items */
+}
+
+.grid-item img {
+    width: 100%; /* Set images to take up the full width of their container */
+    height: auto; /* Keep aspect ratio */
+    border-radius: 15px; /* Add rounded corners */
+}
+
+.grid-item1 img {
+    /* Specific styles for first image if needed */
+    width: 40%;
+    border-radius: 15% 0px; /* Rounded only on one side */
+}
+
+.grid-item2 img {
+    /* Specific styles for second image */
+    width: 30%; /* Slightly smaller width */
+    border-radius: 15%; /* Fully rounded corners */
+}
+
+.grid-item3 img {
+    /* Specific styles for third image */
+    width: 30%; /* Full width */
+    border-radius: 0px 15%; /* Rounded corners on the opposite side */
+}
+
   
   .custom-play-btn {
     position: absolute;
