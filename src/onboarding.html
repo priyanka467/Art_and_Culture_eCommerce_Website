@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Onboarding Process</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Link to CSS -->
+</head>
+<body>
+  <!-- Splash Screen -->
+  <div id="splash-screen" class="splash-screen">
+    <img src="logo.png" alt="Logo" class="logo">
+    <h1 class="welcome-text">LOOKS LIKE YOU'RE NEW HERE!</h1>
+  </div>
+
+  <!-- Onboarding Steps -->
+  <div id="onboarding-container" class="onboarding-container hidden">
+    <!-- Step 1: Mobile Input -->
+    <div id="step-1" class="onboarding-step">
+      <h2>Step 1: Enter Mobile Number</h2>
+      <input type="text" id="mobile-input" placeholder="Enter your mobile number">
+      <button id="next-btn-1">Next</button>
+    </div>
+
+    <!-- Step 2: Verification -->
+    <div id="step-2" class="onboarding-step hidden">
+      <h2>Step 2: Enter Verification Code</h2>
+      <input type="text" id="verification-input" placeholder="Enter verification code">
+      <button id="next-btn-2">Next</button>
+    </div>
+
+    <!-- Step 3: Account Setup -->
+    <div id="step-3" class="onboarding-step hidden">
+      <h2>Step 3: Account Setup</h2>
+      <input type="text" id="username-input" placeholder="Enter your username">
+      <input type="password" id="password-input" placeholder="Enter your password">
+      <button id="finish-btn">Finish</button>
+    </div>
+  </div>
+
+  <script src="scripts.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>

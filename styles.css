@@ -231,8 +231,8 @@ body {
   }
   
   .grid-item {
-    background-color: #f4f4f4;
-    padding: 20px;
+    /* background-color: #f4f4f4;
+    padding: 20px; */
     text-align: center;
   }
   #header-container {
@@ -1043,22 +1043,104 @@ body {
   }
   
   .image-grid {
-    display: flex; /* Use flexbox to arrange items in a row */
-    justify-content: space-between; /* Space out the items evenly */
+    display: flex;
+    justify-content: space-between;
     margin-top: 20px;
-    /* display: none; Initially hidden */
-  }
-  
-  .grid-item {
-    flex: 1; /* Each item will take equal space */
-    margin: 0 10px; /* Add margin for spacing */
-    max-width: 32%; /* Ensure each item has a maximum width */
-  }
-  
-  .grid-item img {
-    width: 100%; /* Make images responsive */
-    height: auto; /* Maintain aspect ratio */
-  }
+    /* gap: 20px; Add space between items */
+}
+
+.grid-item {
+    flex: 1;
+    position: relative; /* For overlay and icon positioning */
+    text-align: center;
+}
+
+.grid-item1 img {
+    width: 100%;
+    height: 500px;
+    border-radius: 15% 0; /* Rounded corners for images */
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+.grid-item2 img {
+  width: 100%;
+  height: 500px;
+  border-radius: 8px; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+.grid-item3 img {
+  width: 100%;
+  height: 500px;
+  border-radius: 0 15%; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.grid-item img:hover {
+    transform: scale(1.05); /* Zoom effect on hover */
+}
+
+.grid-item p {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #b28760; /* Add a suitable color */
+}
+
+/* Like Icon Styling */
+.like-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #b28760; /* Matching the theme color */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.like-icon:hover {
+    transform: scale(1.2); /* Slight zoom on hover */
+}
+
+/* Overlay Styling */
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Slight dark overlay */
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    display: none; /* Hidden by default */
+    text-align: center;
+}
+
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.overlay button {
+    background-color: #b28760;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.overlay button:hover {
+    background-color: #8b653f;
+}
+
+/* Show overlay when any image is hovered */
+.grid-item:hover .overlay {
+    display: block; /* Show overlay on hover of any grid item */
+}
+
+.grid-item:hover img {
+    transform: scale(1.05); /* Maintain hover zoom on the image */
+}
+
+
   
   .artisan-profile {
     display: flex;
