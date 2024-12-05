@@ -1,0 +1,119 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f9f8f7;
+}
+
+/* Onboarding Page Layout */
+.onboarding-page {
+    display: flex;
+    width: 90%;
+    max-width: 1000px;
+    height: 80%;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Left Panel Styling */
+.left-panel {
+    flex: 1;
+    background-color: #d3b185;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+.left-panel h1 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.left-panel p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Right Panel Styling */
+.right-panel {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.right-panel label {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.right-panel input, 
+.right-panel select {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.right-panel input:focus, 
+.right-panel select:focus {
+    outline: none;
+    border-color: #d3b185;
+}
+
+.right-panel button {
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: #d3b185;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right-panel button:hover {
+    background-color: #b2946b;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .onboarding-page {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .left-panel {
+        padding: 20px;
+    }
+
+    .right-panel {
+        padding: 20px;
+    }
+}
