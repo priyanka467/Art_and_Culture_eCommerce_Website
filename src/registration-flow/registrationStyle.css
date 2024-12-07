@@ -117,3 +117,53 @@ body {
         padding: 20px;
     }
 }
+
+/* Splash Screen */
+#splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7e8d5;
+    color: #4c3b28;
+    text-align: center;
+}
+
+.splash-content {
+    animation: fadeOut 3s ease-in-out;
+}
+
+.splash-content .logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.splash-content .website-name {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.splash-content .tagline {
+    font-size: 1rem;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+/* Animation for fading out */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup Account</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page onboarding-page">
+        <div class="content">
+            <h2>Let’s setup your account!</h2>
+            <p>Your taste inspires our collection — discover craftsmanship that speaks to you.</p>
+            <input type="text" placeholder="Your Name" id="name">
+            <input type="number" placeholder="Your Age" id="age">
+            <select id="gender">
+                <option value="">Your Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <button onclick="goToHome()">Continue</button>
+        </div>
+    </div>
+
+    <script>
+        function goToHome() {
+            window.location.href = "homepage.html";
+        }
+    </script>
+</body>
+</html>
