@@ -4,21 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mainStyle.css">
 </head>
 <body>
     <div class="page onboarding-page">
+        <!-- Left Section -->
+        <div class="left-banner">
+            <h2 class="leftBanner-Head">Looks like you’re new here!</h2>
+            <p>Sign up with your mobile number to get started</p>
+        </div>
+        <!-- Right Section -->
         <div class="content">
-            <h2>Looks like you’re new here!</h2>
-            <p>Sign up with your mobile number to get started.</p>
-            <input type="text" placeholder="Enter your mobile number" id="mobile">
-            <button onclick="nextPage()">Sign Up</button>
+            <h2 class="heading-mobNum">Celebrate the art of creation—where tradition meets innovation.</h2>
+            <input type="text" placeholder="Mobile Number" id="mobile">
+            <button onclick="validateMobileNumber()">Sign Up</button>
         </div>
     </div>
 
+   
     <script>
-        function nextPage() {
-            window.location.href = "onboarding2.html";
+        function validateMobileNumber() {
+            const mobileInput = document.getElementById("mobile");
+            const mobileNumber = mobileInput.value.trim();
+
+            // Regular expression for validating 10 digit mobile number
+            const mobileRegex = /^[6-9]\d{9}$/;
+
+            if (!mobileNumber.match(mobileRegex)) {
+                alert("Please enter a valid mobile number starting with 6-9 and 10 digits.");
+                mobileInput.focus();
+            } else {
+                // Proceed with OTP sending logic here
+                alert("Mobile number is valid. OTP sent!");
+                // Optionally navigate to OTP page or trigger next steps
+                window.location.href = "onboarding2.html"; // For example, redirecting to OTP page
+            }
         }
     </script>
 </body>

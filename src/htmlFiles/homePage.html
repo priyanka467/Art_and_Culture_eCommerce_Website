@@ -294,6 +294,10 @@
             $('#image-grid').toggle(activeSlide === 0);
             $('#artisan-profile').toggle(activeSlide === 1);
         });
+    setTimeout(() => {
+        document.getElementById("welcome-message").classList.add("hidden");
+    }, 5000); // 5000ms = 5 seconds
+    </script>
     </script>
 </body>
 </html>

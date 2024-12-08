@@ -3,30 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setup Account</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Complete Profile</title>
+    <link rel="stylesheet" href="mainStyle.css">
 </head>
 <body>
     <div class="page onboarding-page">
+        <!-- Left Section -->
+        <div class="left-banner">
+            <h2 class="leftBanner-Head">Let’s Get to Know You!</h2>
+            <p>Your craft journey starts here. Personalize your profile.</p>
+        </div>
+        <!-- Right Section -->
         <div class="content">
-            <h2>Let’s setup your account!</h2>
-            <p>Your taste inspires our collection — discover craftsmanship that speaks to you.</p>
+            <h2 class="heading-mobNum">Complete Your Profile</h2>
             <input type="text" placeholder="Your Name" id="name">
-            <input type="number" placeholder="Your Age" id="age">
-            <select id="gender">
-                <option value="">Your Gender</option>
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-            <button onclick="goToHome()">Continue</button>
+            <input type="text" placeholder="Your Age" id="age">
+            <input type="text" placeholder="Your Gender" id="personal">
+            <input type="text" placeholder="State" id="state">
+            <button onclick="validateProfile()">Continue</button>
         </div>
     </div>
 
     <script>
-        function goToHome() {
-            window.location.href = "homepage.html";
+        function validateProfile() {
+            // Grab the input values
+            const name = document.getElementById("name").value.trim();
+            const age = document.getElementById("age").value.trim();
+            const gender = document.getElementById("personal").value.trim();
+            const state = document.getElementById("state").value.trim();
+
+            // Validate each field
+            if (name === "") {
+                alert("Please enter your name.");
+                document.getElementById("name").focus();
+                return;
+            }
+
+            if (age === "" || isNaN(age) || age < 1 || age > 120) {
+                alert("Please enter a valid age between 1 and 120.");
+                document.getElementById("age").focus();
+                return;
+            }
+
+            if (gender === "") {
+                alert("Please enter your gender.");
+                document.getElementById("personal").focus();
+                return;
+            }
+
+            if (state === "") {
+                alert("Please enter your state.");
+                document.getElementById("state").focus();
+                return;
+            }
+
+            // If all validations pass, proceed to the next page
+            window.location.href = "src/htmlFiles/homePage.html";
         }
     </script>
 </body>
 </html>
+
